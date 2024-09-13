@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between; /* Adjusted for more even distribution */
+    align-items: center; /* Aligns items vertically in the middle */
+    background-color: #671488; /* Light background for the nav bar */
+    padding: 0 20px; /* Adds horizontal padding for spacing */
+    
+}
+#nav-right{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+.logo img{
+    height: 60px;
+    object-fit: contain;
+}
+
+#contact-us, #about-us {
+    margin-right: 20px; 
+    color: #ffc8dd;
+   
+    display: flex;
+    
+   /* Space between the navigation items */
+}
+
+#contact-us a, #about-us a, #login a {
+    text-decoration: none;
+    color: #ffc8dd;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #ffc8dd;
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+#login a i {
+    font-size: 20px;
+}
+.logo img{
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+    color: white;
+}
+.logo{
+    width: 100px;
+}
+#text{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+.main-box{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffafcc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#photo{
+    width: 50%;
+    height: auto ;
+    align-content: center;
+    justify-content: center;
+}
+#photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+#text{
+    width: 50%;
+    height: auto;
+    padding: 20px;
+}
+
+#search-bar{
+    max-width: 850px;
+    width: 90%;
+    background: #c8a1e0;
+    padding: 20px;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    box-shadow: 1px 4px 15px rgba(0, 0,0, 1);
+    z-index: 3;
+    position: relative;
+    margin-top: -50px;
+}
+#search{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 70px;
+}
+.search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffb6d1;
+    padding: 20px;
+    border-radius: 4px;
+}
+.search-box img{ 
+    color: #671488;
+    margin-right: 10px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+}
+#All-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 20px;
+}
+
+.facilities
+{
+    background-color: #f1f1f1; /* Light background color */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    height: 400px;
+}
+
+.facilities:hover {
+    background-color: #ffb6d1; /* Change background on hover */
+    cursor: pointer;
+}
+
+#review{
+     padding: 50px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.heading{
+    max-width: 1200px;
+    width: 90%;
+    text-align: center;
+}
+.heading h3{
+    font-size: larger;
+    color: #671488;
+}
+.heading p{
+   font-size: 0.9rem;
+    max-width: 600px;
+    line-height: 0.5px;
+}
+
+
+.content{
+    max-width: 1200px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    margin-top: 50px;
+}
+#testimonials-carousel {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #671488;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.client-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.review-text h3 {
+    font-size: 1.5rem;
+    color: #671488;
+    margin-bottom: 10px;
+}
+
+.review-text .location {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.review-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #671488;
+    border-radius: 50%;
+}
