@@ -1,0 +1,219 @@
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+  }
+
+/* About us section */
+#photo-nurse{
+    align-items: flex-end;
+    width: 40%;
+    object-fit: fill;
+}
+#photo-nurse img{
+    object-fit: contain;
+   width: 90%;
+    height: auto;
+}
+.main-about{
+  padding: 2.5rem 7%;
+  position: relative;
+  background-image: url(pattern.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-heading{
+  text-align: center;
+}
+.about-heading h1{
+  color: var(--color3);
+  font-size: 45px;
+}
+.about-heading h1 span{
+  color: var(--color4);
+}
+.about-main-div{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.main-inner-about{
+  flex: 1 1 45rem;
+}
+#random{
+    display: flex;
+    
+}
+.about-right-content{
+    width: 60%;
+}
+.about-right-content h2{
+  color: var(--color4);
+  font-size: 3rem;
+}
+.about-right-content h1{
+  color: var(--color3);
+  font-size: 5rem;
+  padding: 1rem 0;
+}
+.about-right-content p{
+  font-size: 1.5rem;
+  color: var(--color4);
+  padding: 1rem 0;
+  line-height: 2;
+}
+/* From Uiverse.io by Navarog21 */ 
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #d089e5;
+    outline: none;
+    background-color: transparent;
+    color: #674188;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+   
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+
+/* our doctor section started */
+
+.main-our-doctors{
+  padding: 2rem 7%;
+}
+.doctor-heading{
+  padding: 2rem 0;
+  text-align: center;
+}
+.doctor-heading h1{
+  font-size: 45px;
+  color: var(--color3);
+}
+.doctor-heading h1 span{
+  
+  color: var(--color4);
+}
+.doctor-inner-main-div{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.doctor-innerbox{
+  flex: 1 1 300px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  
+}
+.doctor-innerbox::after{
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, white 50%, transparent);
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+ 
+}
+
+.doctor-innerbox:hover:after{
+  bottom: -100px;
+}
+
+
+
+.doctor-innerbox:hover .doctor-icons{
+  left: 5%;
+  cursor: pointer;
+  font-size: 2rem;
+
+}
+.doctor-icons i:hover{
+  border-top-left-radius: 15px;
+  transform: scale(1.1);
+}
+
+
+.doctor-innerbox .teamimg img{
+  width: 100%;
+  border: 4px solid var(--color3);
+  padding: 1rem;
+}
+.doctor-innerbox:hover .teamimg img{
+  border-top-right-radius: 30px;
+}
+
+.doctor-icons{
+  position: absolute;
+  top: 5%;
+  left: -100%;
+  transition: 0.8s ease-in-out;
+  
+}
+
+
+
+.doctor-icons i{
+  padding: 1.7rem;
+  border: 1px solid var(--color3);
+  font-size: 1.5rem;
+  color: var(--color5);
+  background: white;
+  margin: 0.5rem;
+}
+
+.doc-innernames{
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  font-size: 2rem;
+  color: var(--color3);
+  z-index: 1;
+}
