@@ -12,7 +12,7 @@
     align-items: center; /* Aligns items vertically in the middle */
     background-color: #671488; /* Light background for the nav bar */
     padding: 0 20px; /* Adds horizontal padding for spacing */
-    
+    border-radius: 10px;
 }
 #nav-right{
     align-items: center;
@@ -89,7 +89,6 @@
     font-weight: 600;
     transition-duration: .3s;
   }
-  /* hover effect on button width */
   .Btn:hover {
     width: 125px;
     border-radius: 40px;
@@ -101,14 +100,14 @@
     transition-duration: .3s;
     padding-left: 20px;
   }
-  /* hover effect button's text */
+  
   .Btn:hover .text {
     opacity: 1;
     width: 70%;
     transition-duration: .3s;
     padding-right: 10px;
   }
-  /* button click effect*/
+  
   .Btn:active {
     transform: translate(2px ,2px);
   }
@@ -158,7 +157,7 @@
 #search-bar{
     max-width: 850px;
     width: 90%;
-    background: #c8a1e0;
+    background: #ffffff;
     padding: 20px;
     margin: 20px auto;
 
