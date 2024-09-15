@@ -217,3 +217,29 @@ button {
   color: var(--color3);
   z-index: 1;
 }
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.search-container input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #d089e5;
+  border-radius: 0.3em;
+  margin-right: 0.5rem;
+}
+
+.search-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #674188;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #1479EA;
+}
