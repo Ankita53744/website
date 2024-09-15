@@ -211,6 +211,18 @@
     padding: 5px;
     font-size: 18px;
 }
+/*our services.*/
+#our-services{
+    width: 100%;
+    padding: 3rem 7%;
+}
+#services-heading h2{
+    font-size: 40px;
+    color: #671488;
+    text-align: center;
+    padding: 3rem 0;
+}
+
 #All-boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
@@ -230,12 +242,44 @@
     transition: background-color 0.3s ease; /* Smooth hover transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     height: 400px;
+    font-size: 2rem;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
+.facilities h3{
+    font-size: 2.5rem;
+    padding: 0.5rem 0 ;
+}
+.facilities p{
+    font-size: 1rem;
+    line-height: 1.5rem;
 
+}
+.services-icon i{
+    color: #671488;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.services-icon{
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    border-radius: 0;
+    color: #671488;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto 20px auto;
+}
+.services-icon i{
+    font-size: 2rem;
+    color: #671488;
+    padding: 1rem;
+}
 .facilities:hover {
     background-color: #ffb6d1; /* Change background on hover */
     cursor: pointer;
 }
+
 
 #review{
      padding: 50px;
