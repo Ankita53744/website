@@ -7,7 +7,8 @@ CREATE TABLE nurses (
     availability_status VARCHAR(50),
     rating FLOAT
 );
-INSERT INTO nurses (name, image, description) VALUES
-('Mr. Robert Gray', 'team1.jpg', 'Brief description of Mr. Robert Gray'),
-('Ms. Jane Doe', 'team2.jpg', 'Brief description of Ms. Jane Doe'),
-('Dr. John Smith', 'team3.jpg', 'Brief description of Dr. John Smith');
+
+INSERT INTO nurses (name, photo, specialization, contact_info, availability_status, rating) VALUES
+('Mr. Robert Gray', 'team1.jpg', 'Cardiologist', '555-1234', 'Available', 4.5),
+('Ms. Jane Doe', 'team2.jpg', 'Pediatrician', '555-5678', 'Not Available', 4.7),
+('Dr. John Smith', 'team3.jpg', 'Surgeon', '555-8765', 'Available', 4.6);

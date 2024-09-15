@@ -38,13 +38,72 @@
     
         </div>
     </div>
-    <div class="search-container"></div>
-    <form method="GET" action="data.php">
-        <input type="text" name="search" placeholder="Search for a nurse...">
-        <button type="submit">Search</button>
-    </form>
-    
+    <div class="search-container">
+        <form id="searchForm">
+            <input type="text" id="searchInput" name="search" placeholder="Search for a nurse...">
+            <button type="submit">Search</button>
+        </form>
     </div>
+
+    <div id="results">
+        <!-- Search results will appear here -->
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+
+            const searchValue = document.getElementById('searchInput').value;
+            if (searchValue) {
+                fetchResults(searchValue);
+            } else {
+                alert('Please enter a name to search.');
+            }
+        });
+
+        function fetchResults(search) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `search_nurse.php?search=${encodeURIComponent(search)}`, true);
+
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    try {
+                        const results = JSON.parse(this.responseText);
+                        let output = '';
+
+                        if (results.length > 0) {
+                            results.forEach(function(nurse) {
+                                output += `
+                                    <div class="nurse">
+                                        <img src="${nurse.photo}" alt="${nurse.name}">
+                                        <h2>${nurse.name}</h2>
+                                        <p>Specialization: ${nurse.specialization}</p>
+                                        <p>Contact: ${nurse.contact_info}</p>
+                                        <p>Status: ${nurse.availability_status}</p>
+                                        <p>Rating: ${nurse.rating}</p>
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            output = '<p>No nurses found.</p>';
+                        }
+
+                        document.getElementById('results').innerHTML = output;
+                    } catch (e) {
+                        console.error('Error parsing JSON:', e);
+                    }
+                } else {
+                    console.error('Error fetching data:', this.statusText);
+                }
+            };
+
+            xhr.onerror = function() {
+                console.error('Request error');
+            };
+
+            xhr.send();
+        }
+    </script>
     <div class="main-our-doctors"></div>
         <div class="doctor-heading">
             <h1> Our <span>Nurses</span></h1>
@@ -83,7 +142,7 @@
                 </div>
 
                 <div class="doc-innernames">
-                    <h2>Mr Robert Gray</h2>
+                    <h2>Ankita</h2>
                 </div>
                 
             </div>
@@ -101,7 +160,7 @@
                 </div>
 
                 <div class="doc-innernames">
-                    <h2>Mr Robert Gray</h2>
+                    <h2>Himanshu</h2>
                 </div>
                 
             </div>
@@ -119,7 +178,7 @@
                 </div>
 
                 <div class="doc-innernames">
-                    <h2>Mr Robert Gray</h2>
+                    <h2>Apurva</h2>
                 </div>
                 
             </div>
@@ -137,7 +196,7 @@
                 </div>
 
                 <div class="doc-innernames">
-                    <h2>Mr Robert Gray</h2>
+                    <h2>Kuldeep</h2>
                 </div>
                 
             </div>
