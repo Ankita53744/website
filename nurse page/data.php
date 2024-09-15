@@ -1,39 +1,41 @@
 <?php
-$servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Connect to the database
+$conn = mysqli_connect("localhost", "username", "password", "nurse_database");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+
+// Get the search query from the form
 $search_query = $_GET['search'];
-$sql = "SELECT * FROM nurses WHERE name LIKE '%$search_query%' OR specialization LIKE '%$search_query%'";
 
-//fetching
-?>
-<?php
-$sql = "SELECT name, photo, specialization, contact_info, availability_status, rating FROM nurses";
-$result = $conn->query($sql);
+// Query the database to find matching nurses
+$query = "SELECT * FROM nurses WHERE name LIKE '%$search_query%' OR description LIKE '%$search_query%'";
+$result = mysqli_query($conn, $query);
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "<div class='nurse'>";
-        echo "<img src='" . $row['photo'] . "' alt='" . $row['name'] . "'>";
+// Display the search results
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Display the nurse's profile information
+        echo "<div class='doctor-innerbox'>";
+        echo "<div class='doctor-icons'>";
+        echo "<i class='fa-solid fa-heart' aria-hidden='true'></i>";
+        echo "<i class='fa-solid fa-share' aria-hidden='true'></i>";
+        echo "<i class='fa-solid fa-eye' aria-hidden='true'></i>";
+        echo "</div>";
+        echo "<div class='teamimg'>";
+        echo "<img src='" . $row['image'] . "' alt=''>";
+        echo "</div>";
+        echo "<div class='doc-innernames'>";
         echo "<h2>" . $row['name'] . "</h2>";
-        echo "<p>Specialization: " . $row['specialization'] . "</p>";
-        echo "<p>Contact: " . $row['contact_info'] . "</p>";
-        echo "<p>Status: " . $row['availability_status'] . "</p>";
-        echo "<p>Rating: " . $row['rating'] . "</p>";
+        echo "</div>";
         echo "</div>";
     }
 } else {
-    echo "0 results";
+    echo "No matching nurses found.";
 }
 
-$conn->close();
+// Close the database connection
+mysqli_close($conn);
 ?>

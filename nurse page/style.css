@@ -221,6 +221,8 @@ button {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
+  align-content: center;
+  margin-top: -10px;
 }
 
 .search-container input[type="text"] {
