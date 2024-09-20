@@ -1,9 +1,122 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Navigation Bar */
+#nav {
+  background: #5d3a9b;
+  padding: 15px 0;
+}
+
+#header {
+  background-color: #5d3a9b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#header h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+#image img {
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Main Content */
+h2 {
+  margin: 30px 0;
+  font-size: 2em;
+  text-align: center;
+  color: #4a4a4a;
+  background-color: #e1bee7;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#search-box {
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#search-box:focus {
+  border-color: #5d3a9b;
+}
+
+button {
+  display: block;
+  width: 200px;
+  padding: 12px;
+  background-color: #5d3a9b;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px auto;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #4a2c7e;
+  transform: scale(1.05);
+}
+
+/* Map Container */
 #map {
-    height: 350px;
-  }
-  #search-box {
-    margin: 10px;
-    padding: 10px;
-    font-size: 14px;
-    width: 250px;
-  }
+  width: 90%;
+  height: 500px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #5d3a9b;
+}
+
+/* Popup Styles */
+.popup-content {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.popup-content strong {
+  color: #5d3a9b;
+}
+
+.popup-content a {
+  color: #5d3a9b;
+  text-decoration: none;
+}
+
+.popup-content a:hover {
+  text-decoration: underline;
+}

@@ -37,7 +37,7 @@
   font-size: 45px;
 }
 .about-heading h1 span{
-  color: var(--color4);
+  color: #2d0f47;
 }
 .about-main-div{
   display: flex;
@@ -78,9 +78,9 @@
 }
 .teamimg img{
   width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    border: 3px solid var(--color3);
+    border: 3px solid #2d0f47;
 }
 /* our doctor section started */
 
@@ -97,7 +97,7 @@
 }
 .doctor-heading h1 span{
   
-  color: var(--color4);
+  color: #2d0f47;
 }
 .doctor-inner-main-div{
   display: flex;

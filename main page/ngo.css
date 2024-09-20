@@ -7,14 +7,14 @@ body, h1, h2, h3, p, form, input, textarea, button {
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #030202;
     line-height: 1.6;
     background: #f0f4f8;
 }
 
 /* Navigation */
 nav {
-    background: #3498db;
+    background: #4f055e;
     padding: 15px 20px;
 }
 
@@ -41,7 +41,7 @@ nav {
 }
 
 .nav-link:hover, .nav-link.active {
-    background: #2980b9;
+    background: #b753e6;
     color: #fff;
     border-radius: 5px;
 }
@@ -102,7 +102,7 @@ header {
 section {
     padding: 50px 20px;
     text-align: center;
-    background: #ffffff;
+    background: #e9add5;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -151,11 +151,11 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-color: #3498db;
+    border-color: #61118f;
 }
 
 form button, .cta-button {
-    background: #2ecc71;
+    background: #4a055f;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -166,7 +166,7 @@ form button, .cta-button {
 }
 
 form button:hover, .cta-button:hover {
-    background: #27ae60;
+    background: #b12ebd;
     transform: scale(1.05);
 }
 
@@ -188,7 +188,7 @@ form button:hover, .cta-button:hover {
 }
 
 .tab-button {
-    background: #3498db;
+    background: #630a75;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -200,11 +200,11 @@ form button:hover, .cta-button:hover {
 }
 
 .tab-button.active {
-    background: #2980b9;
+    background: #6e0d7a;
 }
 
 .tab-button:hover {
-    background: #1f5f80;
+    background: #6d0d75;
 }
 
 .tab-content {
@@ -217,7 +217,7 @@ form button:hover, .cta-button:hover {
 
 /* Footer */
 footer {
-    background: #2c3e50;
+    background: #b878dd;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -241,7 +241,7 @@ footer {
 }
 
 .tab-button {
-    background: #3498db;
+    background: #6c148f;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -253,11 +253,11 @@ footer {
 }
 
 .tab-button.active {
-    background: #2980b9;
+    background: #4e0c6d;
 }
 
 .tab-button:hover {
-    background: #1f5f80;
+    background: #400661;
 }
 
 .tab-content {

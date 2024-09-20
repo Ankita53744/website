@@ -12,9 +12,20 @@ body {
     background: #f0f4f8;
 }
 
+#about{
+    background-color: #c8a1e0;
+}
+#about h2{
+    font-weight: bolder;
+    font-size: largest;
+
+}
+#about p{
+    font-weight: bold;
+}
 /* Navigation */
 nav {
-    background: #3498db;
+    background: #3e094b;
     padding: 15px 20px;
 }
 
@@ -41,7 +52,7 @@ nav {
 }
 
 .nav-link:hover, .nav-link.active {
-    background: #2980b9;
+    background: #c8a1e0;
     color: #fff;
     border-radius: 5px;
 }
@@ -120,6 +131,10 @@ section {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+
+}
+.testimonial-bg{
+    background-color: #c8a1e0;
 }
 
 .program, .story, .speaker, .testimonial {
@@ -131,6 +146,11 @@ section {
     max-width: 300px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #c8a1e0;
+}
+.speaker p{
+    font-size: large;
+    font-weight: bold;
 }
 
 .program img, .story img, .speaker img, .testimonial img {
@@ -139,8 +159,18 @@ section {
     object-fit: cover;
     border-radius: 8px;
 }
+.container h2{
+    color: #27022e;
+}
+.testimonial p{
+    font-size: large;
+    font-weight: bold;
+}
 
 /* Forms */
+#registration{
+    background-color: #c8a1e0;
+}
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -151,11 +181,11 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-color: #3498db;
+    border-color: #510461;
 }
 
 form button, .cta-button {
-    background: #2ecc71;
+    background: #37085e;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -166,8 +196,11 @@ form button, .cta-button {
 }
 
 form button:hover, .cta-button:hover {
-    background: #27ae60;
+    background: #27022e;
     transform: scale(1.05);
+}
+#contact{
+    background-color: #c8a1e0;
 }
 
 /* Align Donate Button */
@@ -188,7 +221,7 @@ form button:hover, .cta-button:hover {
 }
 
 .tab-button {
-    background: #3498db;
+    background: #c40eb4;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -200,11 +233,11 @@ form button:hover, .cta-button:hover {
 }
 
 .tab-button.active {
-    background: #2980b9;
+    background: #3d0861;
 }
 
 .tab-button:hover {
-    background: #1f5f80;
+    background: #5d117a;
 }
 
 .tab-content {
@@ -241,7 +274,7 @@ footer {
 }
 
 .tab-button {
-    background: #3498db;
+    background: #560f77;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -253,11 +286,11 @@ footer {
 }
 
 .tab-button.active {
-    background: #2980b9;
+    background: #540a85;
 }
 
 .tab-button:hover {
-    background: #1f5f80;
+    background: #640b7a;
 }
 
 .tab-content {

@@ -1,11 +1,12 @@
 const nurses = [
-    { name: "Mr. Robert Gray", location: "Kalyan", image: "team1.jpg" },
-    { name: "Ankita", location: "Thane", image: "team2.jpg" },
-    { name: "Himanshu", location: "Navi Mumbai", image: "team3.jpg" },
-    { name: "Apurva", location: "Kalyan", image: "team4.jpg" },
-    { name: "Kuldeep", location: "Navi Mumbai", image: "team5.jpg" },
-    { name: "Mr. Robert Gray", location: "Pune", image: "team6.jpg" }
+    { name: "Rajesh Sharma", location: "Kalyan", image: "rajesh.jpeg" },
+    { name: "Sunita Verma", location: "Thane", image: "sunita.jpeg" },
+    { name: "Vikram Joshi", location: "Navi Mumbai", image: "vikram.jpeg" },
+    { name: "Riya Singh", location: "Kalyan", image: "riya.jpeg" },
+    { name: "Lakshmi Rao", location: "Navi Mumbai", image: "lakshmi.jpeg" },
+    { name: "Anil Patel", location: "Pune", image: "anil.jpeg" }
 ];
+
 
 // Function to display nurses based on the filter
 function displayNurses(filteredNurses) {
