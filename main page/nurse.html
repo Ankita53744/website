@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Nurse</title>
+    <link rel="stylesheet" href="nurse.css">
+    <link rel="shortcut icon" href="lpgo.png">
+    <script src="https://kit.fontawesome.com/3bcffecad9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
+    <div class="main-about" id="about">
+        
+        <div class="about-main-div">
+            
+            <div class="main-inner-about">
+                
+            </div>
+            <div class="main-inner-about">
+                <div id="random">
+                <div class="about-right-content">
+                    <h2>Find a Nurse</h2>
+                    <h1>A Perfect Helping Hand</h1>
+                    <p>Facility provided for helping people in absence of loved ones</p>
+    
+                </div>
+                <div id="photo-nurse">
+                    <img src="img-dentist-2.png" alt="">
+                </div>
+            </div>
+            
+            
+            </div>
+    
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search nurse location here..." />
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <button class="button-value" onclick="filterNurses('all')">All</button>
+            <button class="button-value" onclick="filterNurses('Kalyan')">Kalyan</button>
+            <button class="button-value" onclick="filterNurses('Thane')">Thane</button>
+            <button class="button-value" onclick="filterNurses('Navi Mumbai')">Navi Mumbai</button>
+            <button class="button-value" onclick="filterNurses('Pune')">Pune</button>
+        </div>
+    </div>
+
+    <!-- Nurse List Section -->
+    <div class="doctor-inner-main-div" id="nurse-list">
+        <!-- Nurse cards will be displayed here -->
+    </div>
+      <!---search bar end-->
+      <script src="temparaty.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hospitals and Clinics</title>
+    <link rel="shortcut icon" href="lpgo.png">
+    <link rel="stylesheet" href="hospitals.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-bar">
+          <select id="location-select">
+            <option value="" disabled selected>Select Location</option>
+            <option value="location1">Thane</option>
+            <option value="location2">Kalyan</option>
+            <option value="location3">Ghatkopar</option>
+            <option value="location4">Navi Mumbai</option>
+            <option value="location5">Dadar</option>
+          </select>
+          <button type="button" onclick="filterResults()">Search</button>
+        </div>
+      </div>
+          <!-- Header -->
+    <div class="header">
+        Nearby Hospitals and Clinics
+    </div>
+    
+    <!-- Hospital Grid -->
+    <div class="hospital-grid">
+        <!-- Hospital 1 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Thane+City+Hospital" alt="Thane City Hospital">
+            <h3>Thane City Hospital</h3>
+            <p>Location: Thane</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+        
+        <!-- Hospital 2 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Lifecare+Medical" alt="Lifecare Medical">
+            <h3>Lifecare Medical</h3>
+            <p>Location: Thane</p>
+            <p>Phone: +91 91234 56789</p>
+        </div>
+
+        <!-- Hospital 3 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Kalyan+General+Hospital" alt="Kalyan General Hospital">
+            <h3>Kalyan General Hospital</h3>
+            <p>Location: Kalyan</p>
+            <p>Phone: +91 87654 32109</p>
+        </div>
+
+        <!-- Hospital 4 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Sunshine+Clinic" alt="Sunshine Clinic">
+            <h3>Sunshine Clinic</h3>
+            <p>Location: Kalyan</p>
+            <p>Phone: +91 98234 56789</p>
+        </div>
+
+        <!-- Hospital 5 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Ghatkopar+Medical+Center" alt="Ghatkopar Medical Center">
+            <h3>Ghatkopar Medical Center</h3>
+            <p>Location: Ghatkopar</p>
+            <p>Phone: +91 99876 54321</p>
+        </div>
+
+        <!-- Hospital 6 -->
+        <div class="hospital-card">
+            <img src="https://via.placeholder.com/400x300?text=Care+Hospital" alt="Care Hospital">
+            <h3>Care Hospital</h3>
+            <p>Location: Ghatkopar</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+    </div>
+      <div id="results" class="hospital-grid"></div>
+      <script>
+        // Dummy data for hospitals
+        const hospitals = {
+            "Thane": [
+                { name: "Thane City Hospital", address: "123 Thane St.", phone: "123-456-7890" },
+                { name: "Lifecare Medical", address: "456 Health Rd.", phone: "098-765-4321" }
+            ],
+            "Kalyan": [
+                { name: "Kalyan General Hospital", address: "789 Kalyan Ave.", phone: "111-222-3333" },
+                { name: "Sunshine Clinic", address: "101 Sunshine St.", phone: "444-555-6666" }
+            ],
+            "Ghatkopar": [
+                { name: "Ghatkopar Medical Center", address: "555 Ghatkopar Rd.", phone: "777-888-9999" },
+                { name: "Care Hospital", address: "222 Wellness Blvd.", phone: "333-444-5555" }
+            ],
+            "Navi Mumbai": [
+                { name: "Navi Mumbai Healthcare", address: "999 Navi Mumbai St.", phone: "888-999-0000" },
+                { name: "Seaside Clinic", address: "333 Coastal Rd.", phone: "111-222-3333" }
+            ],
+            "Dadar": [
+                { name: "Dadar City Hospital", address: "444 Dadar Ave.", phone: "444-555-6666" },
+                { name: "Hope Clinic", address: "777 Hope St.", phone: "555-666-7777" }
+            ]
+        };
+
+        // Function to filter results based on location
+        function filterResults() {
+            const location = document.getElementById('location-select').value;
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Clear previous results
+
+            if (hospitals[location]) {
+                hospitals[location].forEach(hospital => {
+                    const hospitalElement = document.createElement('div');
+                    hospitalElement.innerHTML = `<strong>${hospital.name}</strong><br>
+                                                 Address: ${hospital.address}<br>
+                                                 Phone: ${hospital.phone}<br><br>`;
+                    resultsContainer.appendChild(hospitalElement);
+                });
+            } else {
+                resultsContainer.innerHTML = 'No hospitals found for the selected location.';
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

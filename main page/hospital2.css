@@ -1,0 +1,9 @@
+#map {
+    height: 350px;
+  }
+  #search-box {
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+  }

@@ -1,0 +1,186 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Info Page Styles */
+.info-page {
+    background-color: #fcfbfb; /* Light background for the section */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    padding: 20px;
+    background-image: url(pattern.png);
+}
+
+/* Heading Styles */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    color: #674188; /* Matching color to maintain consistency */
+    font-size: 48px;
+}
+
+/* Content Container */
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #c8a1e0; /* Light background for the content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align all text inside info-content */
+}
+
+/* Section Headings */
+.info-content h2 {
+    color: #674188; /* A distinct color for headings */
+    border-bottom: 2px solid #0000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.info-content h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.info-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Custom Bullet Points */
+.info-content ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.info-content ul li {
+    position: relative;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 30px; /* Space for custom bullet */
+    text-align: center; /* Center-align text within list items */
+}
+
+.info-content ul li::before {
+    content: '\2022'; /* Unicode bullet character */
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Color for custom bullet */
+    font-size: 24px; /* Size of custom bullet */
+    line-height: 1;
+}
+
+/* Link Styling */
+.info-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-content a:hover {
+    text-decoration: underline;
+}
+
+/* Image Styling */
+.info-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto; /* Center-align images */
+}
+
+/* New Feature Icons */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #ffffff; /* Background for features section */
+    border-top: 1px solid #ddd; /* Optional border */
+}
+
+.feature {
+    text-align: center;
+    width: 30%; /* Adjust as needed */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.feature h4 {
+    margin: 10px 0;
+    color: #333; /* Color for feature headings */
+}
+
+.feature p {
+    color: #666; /* Color for feature descriptions */
+}
+
+/* Icons */
+.feature::before {
+    content: "";
+    display: block;
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    margin: 0 auto 10px auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.feature:nth-of-type(1)::before {
+    background-image: url('nurse(1).png'); /* Nurse Icon */
+}
+
+.feature:nth-of-type(2)::before {
+    background-image: url('https://img.icons8.com/ios/50/000000/place-marker.png'); /* Nearby Services Icon */
+}
+
+.feature:nth-of-type(3)::before {
+    background-image: url('https://img.icons8.com/ios/50/000000/conference.png'); /* Seminars Icon */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .heading h1 {
+        font-size: 36px;
+    }
+
+    .info-content {
+        padding: 15px;
+    }
+
+    .info-content h2 {
+        font-size: 24px;
+    }
+
+    .info-content p {
+        font-size: 16px;
+    }
+
+    .info-content ul li {
+        font-size: 16px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%; /* Adjust width for mobile */
+    }
+}

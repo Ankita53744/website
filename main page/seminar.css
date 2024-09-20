@@ -1,0 +1,269 @@
+/* Basic reset */
+body, h1, h2, h3, p, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f0f4f8;
+}
+
+/* Navigation */
+nav {
+    background: #3498db;
+    padding: 15px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: #2980b9;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+    ), url('header-background.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Header Content */
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 2s;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 2s;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-main:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Section styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid Layouts */
+.program-grid, .story-grid, .speaker-grid, .testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.program, .story, .speaker, .testimonial {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.program img, .story img, .speaker img, .testimonial img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Forms */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #3498db;
+}
+
+form button, .cta-button {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover, .cta-button:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Align Donate Button */
+.donate-container {
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #2980b9;
+}
+
+.tab-button:hover {
+    background: #1f5f80;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.tab-button.active {
+    background: #2980b9;
+}
+
+.tab-button:hover {
+    background: #1f5f80;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
