@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #C8A1E0;
+    background-color: #491569;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
@@ -27,7 +27,7 @@ header {
 
 .contact-info {
     flex: 1;
-    background-color: #FFC8DD;
+    background-color: #eebed0;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -105,7 +105,7 @@ button:hover {
 }
 
 footer {
-    background-color: #C8A1E0;
+    background-color: #491569;
     padding: 10px;
     text-align: center;
     color: white;

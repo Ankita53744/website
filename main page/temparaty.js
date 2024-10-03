@@ -4,7 +4,7 @@ const nurses = [
     { name: "Vikram Joshi", location: "Navi Mumbai", image: "vikram.jpeg" },
     { name: "Riya Singh", location: "Kalyan", image: "riya.jpeg" },
     { name: "Lakshmi Rao", location: "Navi Mumbai", image: "lakshmi.jpeg" },
-    { name: "Anil Patel", location: "Pune", image: "anil.jpeg" }
+    { name: "Anil Patel", location: "Pune", image: "anil.jpeg" },
 ];
 
 
@@ -41,14 +41,14 @@ displayNurses(nurses);
 function filterNurses(location) {
     let filteredNurses;
     if (location === 'all') {
-        filteredNurses = nurses; // Show all nurses
+        filteredNurses = nurses;
     } else {
         filteredNurses = nurses.filter(nurse => nurse.location === location);
     }
     displayNurses(filteredNurses);
 }
 
-// Search functionality
+
 document.getElementById('search').addEventListener('click', () => {
     const searchInput = document.getElementById('search-input').value.toLowerCase();
     const filteredNurses = nurses.filter(nurse => 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminars</title>
+    <link rel="stylesheet" href="seminar.css">
+    <link rel="shortcut icon" href="lpgo.png">
+    <script>
+        // JavaScript function to display a pop-up message
+        function registerForSeminar() {
+            alert("Email sent for registration!");
+        }
+    </script>
+</head>
+<body>
+    <div class="main-box">
+        <div class="photo-seminar">
+            <img src="pexels-jibarofoto-2774556.jpg" alt="Seminar Image">
+        </div>
+        <div class="text-seminar">SEMINARS ORGANIZED BY NGOs</div>
+    </div>
+    <div class="seminar-page">
+        <h1>Seminars Organized in this Month!!</h1>
+
+        <!-- Seminar Listings -->
+        <div class="seminar-list">
+            <div class="seminar-item" data-ngo="ngo1">
+                <div class="seminar-image-box">
+                    <img src="Adharwad-iso-Logo.png" alt="Seminar 1" class="seminar-image">
+                </div>
+                <div class="seminar-content">
+                    <h2>Developing Generation,Developing Mindset</h2>
+                    <p>Organized by: <strong>ADHARWAD TRUST</strong></p>
+                    <p>Date: <strong>10th October 2024</strong></p>
+                    <p>Location: Thane,Mumbai</p>
+                    <p>Description: This seminar give a broad perspective on changing time and with that there is also change in people's Mindset.</p>
+                    <a href="#" class="register-btn" onclick="registerForSeminar()">Register</a>
+                </div>
+            </div>
+
+            <div class="seminar-item" data-ngo="ngo2">
+                <div class="seminar-image-box">
+                    <img src="budget-2024-elderly-ngos-seek-major-revisions-in-upcoming-budget-to-support-senior-citizens.jpg" alt="Seminar 2" class="seminar-image">
+                </div>
+                <div class="seminar-content">
+                    <h2>Protecting Your Health</h2>
+                    <p>Organized by: <strong>JEVAN NGO</strong></p>
+                    <p>Date: <strong> 18th October 2024</strong></p>
+                    <p>Location: Kurla,Mumbai</p>
+                    <p>Description: This seminar is on how the senior citizens' can take care of their health and maintain a good balance of exercise and diet easily at home.</p>
+                    <a href="#" class="register-btn" onclick="registerForSeminar()">Register</a>
+                </div>
+            </div>
+
+            <div class="seminar-item" data-ngo="ngo3">
+                <div class="seminar-image-box">
+                    <img src="shikshalogo.png" alt="Seminar 3" class="seminar-image">
+                </div>
+                <div class="seminar-content">
+                    <h2>Engaging in Activities</h2>
+                    <p>Organized by: <strong>SHIKSHA FOUNDATION</strong></p>
+                    <p>Date: <strong>27th October 2024</strong></p>
+                    <p>Location: Kalyan,Mumbai</p>
+                    <p>Description: This seminar focuses on how an individual can engage themselves in different activities which will help in developing Mind.</p>
+                    <a href="#" class="register-btn" onclick="registerForSeminar()">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NGO Button -->
+    <div class="ngo-link">
+        <a href="ngo.html" class="btn-ngo">Learn More About NGOs</a>
+    </div>
+</body>
+</html>

@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="lpgo.png">
 </head>
 <body>
+    <script>
+        // JavaScript function to display a pop-up message
+        function registerForSeminar() {
+            alert("Email sent Successfully!");
+        }
+    </script>
     <header>
         <h1>Contact Us</h1>
     </header>
@@ -27,7 +33,7 @@
             <label for="incident">What Happened?</label>
             <textarea id="incident" name="incident" rows="4" required></textarea>
             
-            <button type="submit">Submit</button>
+            <button type="submit"><a href="#" class="register-btn" onclick="registerForSeminar()">SUBMIT</a></button>
         </form>
     </section>
     

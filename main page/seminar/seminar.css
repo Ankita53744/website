@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main-box {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.photo-seminar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.text-seminar {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.seminar-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Seminar List */
+.seminar-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Space between seminar boxes */
+}
+
+/* Seminar Item */
+.seminar-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    gap: 20px; /* Space between image and text */
+    background-color: #d6bcdb;
+}
+
+.seminar-item:hover {
+    transform: scale(1.02);
+}
+
+/* Image Box */
+.seminar-image-box {
+    width: 30%; /* Make the image box take up 30% of the width */
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Seminar Image */
+.seminar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the box */
+}
+
+/* Seminar Content */
+.seminar-content {
+    flex: 1; /* Allow the text content to take up remaining space */
+    
+}
+.seminar-content h2{
+    color: #380342;
+    font-weight: bolder;
+}
+/* Button Styles */
+.register-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4f055e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #6d0d75;
+}
+/* .ngo-link{
+    align-self: center;
+} */
+.btn-ngo {
+    align-self: center;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    position: relative;;
+}
+
+.btn-ngo:hover {
+    background: #c0392b;
+}

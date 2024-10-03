@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Nurse</title>
+    <link rel="stylesheet" href="nurse2.css">
+    <link rel="stylesheet" href="nurse2.js">
+    <link rel="stylesheet" href="nurse2.php">
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" id="locationInput" placeholder="Enter your location">
+        <button onclick="searchNursesByCity()">Search</button>
+    </div>
+
+    <div id="nurseResults"></div>
+
+    <script>
+        function searchNursesByCity() {
+            const location = document.getElementById('locationInput').value;
+            
+            if (!location) {
+                alert("Please enter a location");
+                return;
+            }
+
+            fetch(`/search_nurses.php?city=${encodeURIComponent(location)}`)
+                .then(response => response.json())
+                .then(data => displayNurses(data))
+                .catch(error => console.error("Error fetching nurses:", error));
+        }
+
+        function displayNurses(data) {
+            const resultsDiv = document.getElementById("nurseResults");
+            resultsDiv.innerHTML = "";  // Clear previous results
+
+            if (data.error) {
+                resultsDiv.innerHTML = `<p>${data.error}</p>`;
+                return;
+            }
+
+            if (data.length === 0) {
+                resultsDiv.innerHTML = "<p>No nurses found for this location.</p>";
+            } else {
+                data.forEach(nurse => {
+                    const nurseDiv = document.createElement('div');
+                    nurseDiv.className = "nurse-card";
+                    nurseDiv.innerHTML = `
+                        <img src="${nurse.photo_url}" alt="Nurse Photo" />
+                        <h3>${nurse.name}</h3>
+                        <p>Specialty: ${nurse.specialty}</p>
+                        <p>City: ${nurse.city}</p>
+                        <p>Contact: ${nurse.contact_info}</p>
+                    `;
+                    resultsDiv.appendChild(nurseDiv);
+                });
+            }
+        }
+    </script>
+    <div id="nurseResults">
+        <!-- Nurse profile cards will be displayed here dynamically via JavaScript -->
+    </div>
+    
+</body>
+</html>
